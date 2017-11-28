@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-		sh '/usr/bin/aws s3 cp /var/jenkins_home/workspace/java-pipeline/workspace/java-pipeline/dist/rectangle-2.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar'
+		sh '/usr/bin/aws s3 cp /var/jenkins_home/workspace/java-pipeline/dist/rectangle-2.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar'
             }
         }
     }
