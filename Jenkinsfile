@@ -1,4 +1,3 @@
-Jenkinsfile (Declarative Pipeline)
 properties([pipelineTriggers([githubPush()])])
 
 pipeline {
