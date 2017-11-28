@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'e5c6ac1b-c40b-4453-be74-d56b3f63d231', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-    sh '/usr/bin/aws s3 cp /var/jenkins_home/workspace/java-pipeline/dist/rectangle-2.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar'
+    sh '/usr/bin/aws s3 cp /var/jenkins_home/workspace/java-pipeline/dist/rectangle-11.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar'
 }
             }
         }
