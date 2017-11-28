@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-		aws s3 cp dist/rectangle-2.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar
+		sh 'aws s3 cp dist/rectangle-2.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-2.jar'
             }
         }
     }
