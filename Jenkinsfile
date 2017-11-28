@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Stuff1..'
+                echo 'Building Stuff2..'
 		git 'https://github.com/mattk25/java-project.git'
 		sh 'ant -buildfile test.xml'
             }
