@@ -1,4 +1,3 @@
-Jenkinsfile (Declarative Pipeline)
 properties([pipelineTriggers([githubPush()])])
 
 pipeline {
@@ -8,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building Stuff..'
+                echo 'Building Stuff1..'
 		git 'https://github.com/mattk25/java-project.git'
 		sh 'ant -buildfile test.xml'
             }
