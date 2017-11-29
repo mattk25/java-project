@@ -11,6 +11,12 @@ pipeline {
 		sh 'ant -f build.xml -v'
             }
         }
+	    stage('Report') {
+		     withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'e5c6ac1b-c40b-4453-be74-d56b3f63d231', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+			sh 'aws cloudformation describe-stack-resources --region us-east-1 --stack-name jenkins >> report.txt'
+}
+		  
+	    }
         stage('Unit Tests') {
             steps {
                 echo 'Testing..'
