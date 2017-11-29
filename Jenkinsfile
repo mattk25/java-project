@@ -23,6 +23,6 @@ pipeline {
 			sh '/usr/bin/aws s3 cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3://jenkins-s3bucket-1v6cyt3fo38f2.s3.amazonaws.com/rectangle-${BUILD_NUMBER}.jar'
 }
             }
-	}}
+	}
     }
 }
