@@ -1,9 +1,8 @@
 properties([pipelineTriggers([githubPush()])])
 
 pipeline {
-    agent any
+    agent { node { label 'bb41d20c7f5d' } }
 
-	node(bb41d20c7f5d) {
     stages {
         stage('Build') {
             steps {
